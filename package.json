@@ -1,0 +1,16 @@
+{
+  "name": "blue-component",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-header": "^1.8.9",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.7.2"
+  },
+  "license": "ISC"
+}

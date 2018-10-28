@@ -1,0 +1,12 @@
+//定位position
+.#{$prefix-name}ps-r {
+	position: relative;
+}
+
+.#{$prefix-name}ps-a {
+	position: absolute;
+}
+
+.#{$prefix-name}ps-f {
+	position: fixed;
+}

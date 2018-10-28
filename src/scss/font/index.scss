@@ -1,0 +1,32 @@
+@import './font-mixin';
+
+/*加粗*/
+.#{$prefix-name}f-b {
+	font-weight: bold;
+}
+
+/*rem 字体大小 0rem -> 5.9rem*/
+@for $i from 0 through 5 {
+	@for $j from 0 through 9 {
+		@if $j == 0 {
+			@if $i != 0 {
+				.#{$prefix-name}f-#{$i} {
+					@include font-size(#{$i + 'rem'});
+				}
+			}
+		} @else {
+			.#{$prefix-name}f-#{$i}_#{$j} {
+				@include font-size(#{$i + '.' + $j + 'rem'});
+			}
+		}
+	}
+}
+
+/*px 字体大小 12px -> 30px*/
+@for $i from 12 through 30 {
+	.#{$prefix-name}f-#{$i}px {
+		@include font-size(#{$i+ 'px'});
+	}
+}
+
+

@@ -1,0 +1,17 @@
+//display -> show || hide
+.#{$prefix-name}hide {
+	display: none;
+}
+
+.#{$prefix-name}show {
+	display: initial;
+}
+
+//display block inline-block
+.#{$prefix-name}block {
+	display: block;
+}
+
+.#{$prefix-name}inline-block {
+	display: inline-block;
+}

@@ -1,0 +1,119 @@
+/*行*/
+.#{$prefix-name}row {
+	width: 100%;
+	@extend %border-box;
+	@extend %c-f;
+}
+
+/*栅格布局-列*/
+
+%xs-bb-l {
+	box-sizing: border-box;
+	float: left;
+	min-height: 1px;
+}
+
+@for $i from 1 through 12 {
+	.#{$prefix-name}col-xs-#{$i} {
+		width: 100%/12*$i;
+		@extend %xs-bb-l;
+	}
+	.#{$prefix-name}col-xs-offset-#{$i} {
+		margin-left: 100%/12*$i;
+		@extend %xs-bb-l;
+	}
+}
+
+@media (min-width: $sm) {
+	%sm-bb-l {
+		box-sizing: border-box;
+		float: left;
+		min-height: 1px;
+	}
+	@for $i from 1 through 12 {
+		.#{$prefix-name}col-sm-#{$i} {
+			width: 100%/12*$i;
+			@extend %sm-bb-l;
+		}
+		.#{$prefix-name}col-sm-offset-#{$i} {
+			margin-left: 100%/12*$i;
+			@extend %sm-bb-l;
+		}
+	}
+}
+
+@media (min-width: $md) {
+	%md-bb-l {
+		box-sizing: border-box;
+		float: left;
+		min-height: 1px;
+	}
+	@for $i from 1 through 12 {
+		.#{$prefix-name}col-md-#{$i} {
+			width: 100%/12*$i;
+			@extend %md-bb-l
+		}
+		.#{$prefix-name}col-md-offset-#{$i} {
+			margin-left: 100%/12*$i;
+			@extend %md-bb-l
+		}
+	}
+}
+
+@media (min-width: $lg) {
+	%lg-bb-l {
+		box-sizing: border-box;
+		float: left;
+		min-height: 1px;
+	}
+	@for $i from 1 through 12 {
+		.#{$prefix-name}col-lg-#{$i} {
+			width: 100%/12*$i;
+			@extend %lg-bb-l;
+		}
+		.#{$prefix-name}col-lg-offset-#{$i} {
+			margin-left: 100%/12*$i;
+			@extend %lg-bb-l;
+		}
+	}
+}
+
+//栅格隐藏节点
+@media (max-width: $xs) {
+	.#{$prefix-name}hidden-xs {
+		display: none !important
+	}
+}
+
+@media (min-width: $xs + 1) and (max-width: $md - 1) {
+	.#{$prefix-name}hidden-sm {
+		display: none !important
+	}
+}
+
+@media (min-width: $md) and (max-width: $lg - 1) {
+	.#{$prefix-name}hidden-md {
+		display: none !important
+	}
+}
+
+@media (min-width: $lg) {
+	.#{$prefix-name}hidden-lg {
+		display: none !important
+	}
+}
+
+//栅格占位节点
+@each $name, $size in $grid-group {
+	@if $name == xs {
+		.#{$prefix-name}visibility-#{$name} {
+			visibility: hidden;
+		}
+	} @else {
+		@media (min-width: #{$size}) {
+			.#{$prefix-name}visibility-#{$name} {
+				visibility: hidden;
+			}
+		}
+	}
+}

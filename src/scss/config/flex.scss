@@ -1,0 +1,56 @@
+/*
+ *	flex 布局
+ *
+ * */
+//flex-direction属性
+$flex-direction: (r, row),
+	(rr, row-reverse),
+	(c, column),
+	(cr, column-reverse);
+
+//flex-wrap
+$flex-wrap: (w, wrap),
+	(nw, nowrap),
+	(wr, wrap-reverse);
+
+/*
+* 设置主轴上的对齐方式
+* flex-start:左边
+* flex-end:右边
+* center:居中
+* space-between:两端对齐
+* space-around:每个项目两侧对齐
+*/
+$flex-justify: (s, flex-start),
+	(e, flex-end),
+	(c, center),
+	(sb, space-between),
+	(sa, space-around);
+
+// 设置交叉轴上的对其
+//flex-start:顶部
+//flex-end:尾部
+//flex-center:居中
+//baseline:字体基线居中
+//stretch:未设置高度，高度自动填满整个容器
+$flex-align-item: (s, flex-start),
+	(e, flex-end),
+	(c, center),
+	(b, baseline),
+	(sc, stretch);
+
+/* align-content */
+$flex-align-content: (s, flex-start),
+	(e, flex-end),
+	(c, center),
+	(sb, space-between),
+	(sa, space-around),
+	(sc, stretch);
+
+//item 定位参数
+$align-self: (a, auto),
+	(s, flex-start),
+	(e, flex-end),
+	(c, center),
+	(b, baseline),
+	(sc, stretch);

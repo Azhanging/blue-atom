@@ -1,0 +1,4 @@
+//box-sizing:border-box
+.#{$prefix-name}bs-bb {
+	@extend %border-box;
+}

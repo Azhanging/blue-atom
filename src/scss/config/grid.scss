@@ -1,0 +1,21 @@
+//大小布局
+$xs: 767px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+$xs-name: xs;
+$sm-name: sm;
+$md-name: md;
+$lg-name: lg;
+
+//布局格式类型名称
+$grid-type-name: $xs-name,
+$sm-name,
+$md-name,
+$lg-name;
+
+$grid-group: ($xs-name, $xs),
+	($sm-name, $sm),
+	($md-name, $md),
+	($lg-name, $lg);

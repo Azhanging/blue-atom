@@ -1,0 +1,4 @@
+/*移动端viewport配置font-size*/
+html[data-mobile-device=true] {
+	font-size: $viewport-font-size;
+}
