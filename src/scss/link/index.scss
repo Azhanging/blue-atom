@@ -1,0 +1,17 @@
+//链接相关
+@each $name, $color in $color-group {
+	.#{$prefix-name}hover-#{$name} {
+		a:not(.not-hover) {
+			&:hover {
+				color: $color !important;
+			}
+		}
+	}
+
+	.#{$prefix-name}link-#{$name} {
+		a {
+			color: $color;
+		}
+	}
+}
+

@@ -35,51 +35,51 @@
 	@for $j from 0 through 9 {
 		@if $j == 0 {
 			@if $i != 0 {
-				.#{$prefix-name}pd-#{$i}rem {
+				.#{$prefix-name}mg-#{$i}rem {
 					margin: #{$i}rem;
 				}
-				.#{$prefix-name}pd-l-#{$i}rem {
+				.#{$prefix-name}mg-l-#{$i}rem {
 					margin-left: #{$i}rem;
 				}
-				.#{$prefix-name}pd-r-#{$i}rem {
+				.#{$prefix-name}mg-r-#{$i}rem {
 					margin-right: #{$i}rem;
 				}
-				.#{$prefix-name}pd-t-#{$i}rem {
+				.#{$prefix-name}mg-t-#{$i}rem {
 					margin-top: #{$i}rem;
 				}
-				.#{$prefix-name}pd-b-#{$i}rem {
+				.#{$prefix-name}mg-b-#{$i}rem {
 					margin-bottom: #{$i}rem;
 				}
-				.#{$prefix-name}pd-tb-#{$i}rem {
+				.#{$prefix-name}mg-tb-#{$i}rem {
 					margin-top: #{$i}rem;
 					margin-bottom: #{$i}rem;
 				}
-				.#{$prefix-name}pd-lr-#{$i}rem {
+				.#{$prefix-name}mg-lr-#{$i}rem {
 					margin-left: #{$i}rem;
 					margin-right: #{$i}rem;
 				}
 			}
 		} @else {
-			.#{$prefix-name}pd-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-#{$i}_#{$j}rem {
 				margin: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-l-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-l-#{$i}_#{$j}rem {
 				margin-left: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-r-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-r-#{$i}_#{$j}rem {
 				margin-right: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-t-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-t-#{$i}_#{$j}rem {
 				margin-top: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-b-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-b-#{$i}_#{$j}rem {
 				margin-bottom: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-tb-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-tb-#{$i}_#{$j}rem {
 				margin-top: #{$i + '.' + $j + 'rem'};
 				margin-bottom: #{$i + '.' + $j + 'rem'};
 			}
-			.#{$prefix-name}pd-lr-#{$i}_#{$j}rem {
+			.#{$prefix-name}mg-lr-#{$i}_#{$j}rem {
 				margin-left: #{$i + '.' + $j + 'rem'};
 				margin-right: #{$i + '.' + $j + 'rem'};
 			}

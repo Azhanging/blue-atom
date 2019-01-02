@@ -21,7 +21,7 @@ var src = {
 gulp.task('sass', function () {
   return gulp.src(src.sass)
     .pipe(sass({
-      outputStyle: 'compact' //compact//compressed//expanded
+      outputStyle: 'compressed' //compact//compressed//expanded
     }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 13 versions', 'ie 6-8'],

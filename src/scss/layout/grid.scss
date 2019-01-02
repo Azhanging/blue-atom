@@ -1,12 +1,12 @@
-/*行*/
+//行
 .#{$prefix-name}row {
 	width: 100%;
 	@extend %border-box;
-	@extend %c-f;
+	@extend %clear-float;
 }
 
-/*栅格布局-列*/
-
+//栅格布局-列
+//xs
 %xs-bb-l {
 	box-sizing: border-box;
 	float: left;
@@ -24,6 +24,7 @@
 	}
 }
 
+//sm
 @media (min-width: $sm) {
 	%sm-bb-l {
 		box-sizing: border-box;
@@ -42,6 +43,7 @@
 	}
 }
 
+//md
 @media (min-width: $md) {
 	%md-bb-l {
 		box-sizing: border-box;
@@ -60,6 +62,7 @@
 	}
 }
 
+//lg
 @media (min-width: $lg) {
 	%lg-bb-l {
 		box-sizing: border-box;
@@ -79,26 +82,30 @@
 }
 
 //栅格隐藏节点
+//xs
 @media (max-width: $xs) {
-	.#{$prefix-name}hidden-xs {
+	.#{$prefix-name}hidden-#{$xs-name} {
 		display: none !important
 	}
 }
 
+//sm
 @media (min-width: $xs + 1) and (max-width: $md - 1) {
-	.#{$prefix-name}hidden-sm {
+	.#{$prefix-name}hidden-#{$sm-name} {
 		display: none !important
 	}
 }
 
+//md
 @media (min-width: $md) and (max-width: $lg - 1) {
-	.#{$prefix-name}hidden-md {
+	.#{$prefix-name}hidden-#{$md-name} {
 		display: none !important
 	}
 }
 
+//lg
 @media (min-width: $lg) {
-	.#{$prefix-name}hidden-lg {
+	.#{$prefix-name}hidden-#{$lg-name} {
 		display: none !important
 	}
 }

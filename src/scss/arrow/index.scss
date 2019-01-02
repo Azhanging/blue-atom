@@ -1,0 +1,41 @@
+@import "./arrow-mixin";
+
+//箭头
+.#{$prefix-name}arrow {
+	display: inline-block;
+	&:after {
+		display: block;
+		width: 9px;
+		height: 9px;
+		box-sizing: border-box;
+		border-left: solid 1px #666;
+		border-top: solid 1px #666;
+		content: "";
+	}
+	&.#{$prefix-name}arrow-l:after {
+		transform: rotate(-45deg);
+	}
+	&.#{$prefix-name}arrow-r:after {
+		transform: rotate(135deg);
+	}
+	&.#{$prefix-name}arrow-t:after {
+		transform: rotate(45deg);
+	}
+	&.#{$prefix-name}arrow-b:after {
+		transform: rotate(-135deg);
+	}
+	&.#{$prefix-name}arrow-small {
+		&:after {
+			width: 6px;
+			height: 6px;
+		}
+	}
+	&.#{$prefix-name}arrow-big {
+		&:after {
+			width: 13px;
+			height: 13px;
+		}
+	}
+	@include arrow();
+}
+

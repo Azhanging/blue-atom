@@ -2,3 +2,8 @@
 .#{$prefix-name}bs-bb {
 	@extend %border-box;
 }
+
+//v-cloak in vue
+[v-cloak] {
+	display: none;
+}

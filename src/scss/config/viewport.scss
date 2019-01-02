@@ -7,6 +7,9 @@ $rem-font-size: .8;
 //rem字体解析的px值
 $px-font-size: 12;
 
+//最大屏幕后不执行vw单位
+$viewport-min-width: 650px;
+
 // rem字体解析的px值/ rem字体 / (设备宽度 / 100vw) =  viewport-fonsize
 $viewport-font-size: #{12/$rem-font-size/($device-width/100) + 'vw'};
 

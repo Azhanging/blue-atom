@@ -14,17 +14,16 @@ $color-white: white;
 $color-grey: #ccc;
 
 $color-default: #666;
-
 $color-primary: #337ab7;
 $color-info: #5bc0de;
 $color-success: #45ae00;
 $color-warning: #ff8400;
 $color-danger: #d9534f;
 
-//-------------------------
 
 // color 颜色组
-$color-group: ('base', $color-base),
+$color-group:
+	('base', $color-base),
 	('999', $color-999),
 	('666', $color-666),
 	('333', $color-333),

@@ -1,20 +1,12 @@
 //%百分比宽度
 @for $i from 1 through 100 {
-	.w-#{$i} {
+	.#{$prefix-name}w-#{$i} {
 		width: #{$i + '%'};
 		@extend %border-box;
 	}
 }
 
-//rem宽度
-@for $i from 1 through 100 {
-	.w-#{$i} {
-		width: #{$i + '%'};
-		@extend %border-box;
-	}
-}
-
-/*pc 上设置宽度*/
+//pc 上设置宽度
 .#{$prefix-name}layout-w-1200px {
 	width: 1200px;
 	margin: 0 auto;

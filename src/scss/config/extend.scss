@@ -4,7 +4,7 @@
 }
 
 /*清除浮动*/
-%c-f {
+%clear-float {
 	&:before,
 	&:after {
 		content: " ";
@@ -13,4 +13,11 @@
 	&:after {
 		clear: both;
 	}
+}
+
+//初始化列表信息
+%reset-ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
