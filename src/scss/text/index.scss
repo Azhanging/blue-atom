@@ -2,39 +2,39 @@
 
 //字体居中左右
 .#{$prefix-name}t-c {
-	text-align: center;
+  text-align: center;
 }
 
 .#{$prefix-name}t-l {
-	text-align: left;
+  text-align: left;
 }
 
 .#{$prefix-name}t-r {
-	text-align: right;
+  text-align: right;
 }
 
 //基线
 .#{$prefix-name}v-m {
-	* {
-		vertical-align: middle;
-	}
+  * {
+    vertical-align: middle;
+  }
 }
 
 .#{$prefix-name}v-t {
-	* {
-		vertical-align: top;
-	}
+  * {
+    vertical-align: top;
+  }
 }
 
 .#{$prefix-name}v-b {
-	* {
-		vertical-align: bottom;
-	}
+  * {
+    vertical-align: bottom;
+  }
 }
 
 //字体颜色
 @each $name, $color in $color-group {
-	.#{$prefix-name}t-#{$name} {
-		@include text-color($color);
-	}
+  .#{$prefix-name}t-#{$name} {
+    @include text-color($color);
+  }
 }

@@ -1,24 +1,24 @@
 .#{$prefix-name}table {
-	width: 100%;
-	&.#{$prefix-name}table-layout {
-		table-layout: fixed;
-	}
-	&.#{$prefix-name}table-pd-5 {
-		th,
-		td {
-			padding: 5px;
-		}
-	}
-	&.#{$prefix-name}table-pd-10 {
-		th,
-		td {
-			padding: 10px;
-		}
-	}
-	&.#{$prefix-name}table-pd-15 {
-		th,
-		td {
-			padding: 15px;
-		}
-	}
+  width: 100%;
+  &.#{$prefix-name}table-layout {
+    table-layout: fixed;
+  }
+  &.#{$prefix-name}table-pd-5 {
+    th,
+    td {
+      padding: 5px;
+    }
+  }
+  &.#{$prefix-name}table-pd-10 {
+    th,
+    td {
+      padding: 10px;
+    }
+  }
+  &.#{$prefix-name}table-pd-15 {
+    th,
+    td {
+      padding: 15px;
+    }
+  }
 }

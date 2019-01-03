@@ -1,0 +1,18 @@
+@import './button-mixin';
+
+//btn
+.#{$prefix-name}btn {
+  display: inline-block;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  background-color: white;
+  @extend %default-line-height;
+  @extend %pd-4-12;
+  @extend %border-box;
+}
+
+//btn color
+@each $name, $color in $color-group {
+  @include btn($name, $color);
+}

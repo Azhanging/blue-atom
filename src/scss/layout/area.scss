@@ -1,26 +1,26 @@
 //%百分比宽度
 @for $i from 1 through 100 {
-	.#{$prefix-name}w-#{$i} {
-		width: #{$i + '%'};
-		@extend %border-box;
-	}
+  .#{$prefix-name}w-#{$i} {
+    width: #{$i + '%'};
+    @extend %border-box;
+  }
 }
 
 //pc 上设置宽度
 .#{$prefix-name}layout-w-1200px {
-	width: 1200px;
-	margin: 0 auto;
-	@extend %border-box;
+  width: 1200px;
+  margin: 0 auto;
+  @extend %border-box;
 }
 
 .#{$prefix-name}layout-w-1000px {
-	width: 1000px;
-	margin: 0 auto;
-	@extend %border-box;
+  width: 1000px;
+  margin: 0 auto;
+  @extend %border-box;
 }
 
 .#{$prefix-name}layout-w-970px {
-	width: 970px;
-	margin: 0 auto;
-	@extend %border-box;
+  width: 970px;
+  margin: 0 auto;
+  @extend %border-box;
 }

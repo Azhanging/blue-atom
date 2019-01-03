@@ -1,9 +1,7 @@
-
-
 /*移动端viewport配置font-size*/
 html[data-mobile-device=true] {
-	font-size: $viewport-font-size;
-	@media (min-width: $viewport-min-width) {
-		font-size: 14px;
-	}
+  font-size: $viewport-font-size;
+  @media (min-width: $viewport-min-width) {
+    font-size: 14px;
+  }
 }
