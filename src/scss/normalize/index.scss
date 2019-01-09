@@ -270,3 +270,8 @@ form[disabled] {
     cursor: not-allowed;
   }
 }
+
+//新版本的chrome select是灰色的
+select {
+  background-color: white;
+}
