@@ -1,0 +1,7 @@
+//配置
+@import '../config/index';
+
+//计算px转化对应的rem值
+@function rem($size) {
+  @return #{$size/$viewport-font-size/($device-width/100)+'rem'};
+}

@@ -17,16 +17,16 @@
 .#{$prefix-name}select-down-icon {
   position: relative;
   select {
-    padding-right: 20px;
+    padding-right: 25px;
   }
   &:after {
     position: absolute;
+    right: 6px;
+    top: 42%;
     width: 0;
     height: 0;
     border: 5px solid transparent;
     border-left-color: #999;
-    right: 6px;
-    top: 42%;
     transform: rotate(90deg);
     content: ""
   }

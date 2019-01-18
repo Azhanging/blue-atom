@@ -1,5 +1,12 @@
 @import './button-mixin';
 
+//移动端底部多出的2px
+html[data-mobile-device=true] {
+  .#{$prefix-name}btn {
+    padding: 4px 12px 2px;
+  }
+}
+
 //btn
 .#{$prefix-name}btn {
   display: inline-block;
