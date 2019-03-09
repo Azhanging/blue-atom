@@ -6,22 +6,22 @@
 }
 
 //rem 字体大小 12px -> 20px 的 rem
-@for $i from 12 through 20 {
+@for $i from 10 through 20 {
   .#{$prefix-name}f-#{$i}rp {
     @include font-size(rem($i));
   }
 }
 
-//rpx 字体大小 12px -> 20px 的 rem
-@for $i from 12 through 20 {
+//rpx 字体大小 10px -> 20px 的 rem
+@for $i from 10 through 20 {
   .#{$prefix-name}f-#{$i}rpx {
     @include font-size(rpx($i));
   }
 }
 
-/*px 字体大小 12px -> 30px*/
-@for $i from 12 through 30 {
-  .#{$prefix-name}f-#{$i}px {
+/*px 字体大小 10px -> 30px*/
+@for $i from 10 through 30 {
+  .#{$prefix-name}f-#{$i} {
     @include font-size(#{$i+ 'px'});
   }
 }
