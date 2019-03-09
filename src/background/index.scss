@@ -1,5 +1,5 @@
 @import './background-mixin';
 
-@each $name,$color in $bg-color-type{
+@each $name,$color in $color-group{
 	@include background($name,$color);
 }
