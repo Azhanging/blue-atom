@@ -5,3 +5,8 @@
 @function rem($size) {
   @return #{$size/$viewport-font-size/($device-width/100)+'rem'};
 }
+
+//微信小程序rpx的转化 以2倍被转化
+@function rpx($size) {
+  @return #{$size * $wx-viewport + 'rpx'};
+}

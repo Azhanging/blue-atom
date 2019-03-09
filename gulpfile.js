@@ -30,7 +30,7 @@ gulp.task('sass', function () {
     .pipe(header([
       '/*',
       '*	blue-component.css v' + config.version,
-      '*	(c) 2016-2018 Blue',
+      '*	(c) 2016-2020 Blue',
       '*	Released under the MIT License.',
       '*	https://github.com/azhanging/blue-component',
       '*	time:${new Date()}',

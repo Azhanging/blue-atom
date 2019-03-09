@@ -5,20 +5,17 @@
   font-weight: bold;
 }
 
-//rem 字体大小 0rem -> 5.9rem
-@for $i from 0 through 5 {
-  @for $j from 0 through 9 {
-    @if $j == 0 {
-      @if $i != 0 {
-        .#{$prefix-name}f-#{$i} {
-          @include font-size(#{$i + 'rem'});
-        }
-      }
-    } @else {
-      .#{$prefix-name}f-#{$i}_#{$j} {
-        @include font-size(#{$i + '.' + $j + 'rem'});
-      }
-    }
+//rem 字体大小 12px -> 20px 的 rem
+@for $i from 12 through 20 {
+  .#{$prefix-name}f-#{$i}rp {
+    @include font-size(rem($i));
+  }
+}
+
+//rpx 字体大小 12px -> 20px 的 rem
+@for $i from 12 through 20 {
+  .#{$prefix-name}f-#{$i}rpx {
+    @include font-size(rpx($i));
   }
 }
 

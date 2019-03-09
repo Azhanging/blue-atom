@@ -13,4 +13,5 @@ $viewport-min-width: 650;
 // rem字体解析的px值/ rem字体 / (设备宽度 / 100vw) =  viewport-fonsize
 $viewport-font-size: $px-font-size/$rem-font-size/($device-width/100);
 
-
+//微信viewport
+$wx-viewport: 2;
