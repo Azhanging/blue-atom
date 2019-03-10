@@ -5,22 +5,22 @@
   font-weight: bold;
 }
 
-//rem 字体大小 12px -> 20px 的 rem
-@for $i from 10 through 20 {
+//rem 字体大小 12px -> 35px 的 rem
+@for $i from 10 through 35 {
   .#{$prefix-name}f-#{$i}rp {
     @include font-size(rem($i));
   }
 }
 
-//rpx 字体大小 10px -> 20px 的 rem
-@for $i from 10 through 20 {
+//rpx 字体大小 10px -> 35px 的 rpx
+@for $i from 10 through 35 {
   .#{$prefix-name}f-#{$i}rpx {
     @include font-size(rpx($i));
   }
 }
 
-/*px 字体大小 10px -> 30px*/
-@for $i from 10 through 30 {
+/*px 字体大小 10px -> 35px*/
+@for $i from 10 through 35 {
   .#{$prefix-name}f-#{$i} {
     @include font-size(#{$i+ 'px'});
   }

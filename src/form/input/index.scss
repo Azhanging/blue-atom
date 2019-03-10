@@ -4,7 +4,6 @@
   border: 1px solid #d0d0d0;
   display: inline-block;
   outline: none;
-  @extend %default-line-height;
   @extend %border-box;
   @extend %pd-4-12;
   &[disabled] {
