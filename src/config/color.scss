@@ -1,10 +1,13 @@
 //颜色配置信息
 $color-base: #00abff !default;
+//浅色的base
+$color-light-base: #00abff !default;
 
 $color-999: #999;
 $color-666: #666;
 $color-333: #333;
 $color-e5e: #e5e5e5;
+$color-f4f: #f4f4f4;
 
 $color-org: #ff8400;
 $color-green: #008000;
@@ -13,21 +16,23 @@ $color-blue: blue;
 $color-white: white;
 $color-grey: #ccc;
 
-$color-default: #666;
-$color-primary: #337ab7;
-$color-info: #5bc0de;
-$color-success: #45ae00;
-$color-warning: #ff8400;
-$color-danger: #d9534f;
+$color-default: #666 !default;
+$color-primary: #337ab7 !default;
+$color-info: #5bc0de !default;
+$color-success: #44cb7f !default;
+$color-warning: #ff8400 !default;
+$color-danger: #fe6270 !default;
 
 
 // color 颜色组
 $color-group:
 	('base', $color-base),
+	('light-base', $color-light-base),
 	('999', $color-999),
 	('666', $color-666),
 	('333', $color-333),
 	('e5e', $color-e5e),
+	('f4f', $color-f4f),
 	('org', $color-org),
 	('green', $color-green),
 	('red', $color-red),

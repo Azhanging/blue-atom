@@ -2,23 +2,23 @@
 
 //移动端底部多出的2px
 html[data-mobile-device=true] {
-	.#{$prefix-name}btn {
-		padding: 4px 12px 2px;
-	}
+  .#{$prefix-name}btn {
+    padding: 4px 12px 2px;
+  }
 }
 
 //btn
 .#{$prefix-name}btn {
-	display: inline-block;
-	outline: none;
-	border: 1px solid transparent;
-	text-align: center;
-	background-color: white;
-	@extend %pd-4-12;
-	@extend %border-box;
+  display: inline-block;
+  outline: none;
+  border: 1px solid transparent;
+  text-align: center;
+  background-color: white;
+  @extend %pd-4-12;
+  @extend %border-box;
 }
 
 //btn color
 @each $name, $color in $color-group {
-	@include btn($name, $color);
+  @include btn($name, $color);
 }

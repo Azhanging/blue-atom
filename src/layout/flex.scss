@@ -1,55 +1,55 @@
 //设置flex布局
 .#{$prefix-name}flex {
-	display: flex;
+  display: flex;
 }
 
 //设置flex-inline布局
 .#{$prefix-name}flex-inline {
-	display: inline-flex;
+  display: inline-flex;
 }
 
 //设置flex 1 - 10 排布
 @for $i from 1 through 10 {
-	.#{$prefix-name}flex-#{$i} {
-		flex: #{$i};
-	}
+  .#{$prefix-name}flex-#{$i} {
+    flex: #{$i};
+  }
 }
 
 //设置常用的flex-direction属性 方向
 @each $name, $attrname in $flex-direction {
-	.#{$prefix-name}flex-d-#{$name} {
-		flex-direction: #{$attrname};
-	}
+  .#{$prefix-name}flex-d-#{$name} {
+    flex-direction: #{$attrname};
+  }
 }
 
 //设置常用的flex-wrap属性 转行
 @each $name, $attrname in $flex-wrap {
-	.#{$prefix-name}flex-w-#{$name} {
-		flex-wrap: #{$attrname};
-	}
+  .#{$prefix-name}flex-w-#{$name} {
+    flex-wrap: #{$attrname};
+  }
 }
 
 //设置常用的flex-flow属性 dorection和wrap的混合用法
 @each $name, $direction-name in $flex-direction {
-	@each $_name, $wrap-name in $flex-wrap {
-		.#{$prefix-name}flex-f-#{$name}-#{$_name} {
-			flex-flow: #{$direction-name} #{$wrap-name};
-		}
-	}
+  @each $_name, $wrap-name in $flex-wrap {
+    .#{$prefix-name}flex-f-#{$name}-#{$_name} {
+      flex-flow: #{$direction-name} #{$wrap-name};
+    }
+  }
 }
 
 //设置主轴上的对齐方式 justrify-content
 @each $name, $attrname in $flex-justify {
-	.#{$prefix-name}flex-jc-#{$name} {
-		justify-content: #{$attrname};
-	}
+  .#{$prefix-name}flex-jc-#{$name} {
+    justify-content: #{$attrname};
+  }
 }
 
 //设置交叉轴的对齐方式 align-item
 @each $name, $attrname in $flex-align-item {
-	.#{$prefix-name}flex-ai-#{$name} {
-		align-items: #{$attrname};
-	}
+  .#{$prefix-name}flex-ai-#{$name} {
+    align-items: #{$attrname};
+  }
 }
 
 /*
@@ -60,21 +60,21 @@
  * 该属性不起作用 align-content
  * */
 @each $name, $attrname in $flex-align-content {
-	.#{$prefix-name}flex-ac-#{$name} {
-		align-content: #{$attrname};
-	}
+  .#{$prefix-name}flex-ac-#{$name} {
+    align-content: #{$attrname};
+  }
 }
 
 //设置flex-basis 1 - 10 排布
 @for $i from 1 through 20 {
-	.#{$prefix-name}flex-basis-#{$i * 5} {
-		flex-basis: $i * 5%;
-	}
+  .#{$prefix-name}flex-basis-#{$i * 5} {
+    flex-basis: $i * 5%;
+  }
 }
 
 // item 定位
 @each $name, $attrname in $align-self {
-	.#{$prefix-name}flex-as-#{$name} {
-		align-self: #{$attrname};
-	}
+  .#{$prefix-name}flex-as-#{$name} {
+    align-self: #{$attrname};
+  }
 }
