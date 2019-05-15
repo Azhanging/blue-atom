@@ -5,10 +5,10 @@
     border-color: $color;
     &:hover {
       cursor: pointer;
-      background-color: $color - 5;
+      background-color: $color;
     }
     &:active, &.active {
-      background-color: $color - 22;
+      background-color: $color;
     }
     &.#{$prefix-name}btn-line {
       color: $color;
