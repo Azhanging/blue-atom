@@ -54,7 +54,7 @@ $use-table: true !default;
 ```
 
 
-### coloe上的配置
+### color上的配置
 
 ```scss
 //颜色配置信息
