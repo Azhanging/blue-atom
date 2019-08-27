@@ -1,0 +1,26 @@
+//配置padding的起始值
+$padding-start: 1 !default;
+$padding-end: 50 !default;
+
+//配置margin的起始值
+$margin-start: 1 !default;
+$margin-end: 50 !default;
+
+//是否使用指定单位的padding
+$use-px-padding: true !default;
+$use-rp-padding: true !default;
+$use-rpx-padding: true !default;
+
+//是否使用指定单位的margin
+$use-px-margin: true !default;
+$use-rp-margin: true !default;
+$use-rpx-margin: true !default;
+
+//是否使用flex
+$use-flex: true !default;
+
+//是否使用栅格系统
+$use-grid: true !default;
+
+//使用百分比宽度
+$use-width-percentage: true !default;

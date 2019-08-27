@@ -1,20 +1,24 @@
 //颜色配置
 @import './color';
-
+//layout相关
+@import './layout';
+//font
+@import './font';
+//箭头
+@import './arrow';
+//链接
+@import './link';
+//表格
+@import './table';
 //前缀名
 @import './prefix';
-
 //viewport配置信息
 @import './viewport';
-
 //extend配置
 @import './extend';
-
 //grid配置
 @import './grid';
-
 //flex配置
 @import './flex';
-
 //border配置
 @import './border';

@@ -9,12 +9,12 @@ $color-333: #333;
 $color-e5e: #e5e5e5;
 $color-f4f: #f4f4f4;
 
-$color-org: #ff8400;
-$color-green: #008000;
-$color-red: red;
-$color-blue: blue;
-$color-white: white;
-$color-grey: #ccc;
+$color-org: #ff8400 !default;
+$color-green: #008000 !default;
+$color-red: red !default;
+$color-blue: blue !default;
+$color-white: white !default;
+$color-grey: #ccc !default;
 
 $color-default: #666 !default;
 $color-primary: #337ab7 !default;

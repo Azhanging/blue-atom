@@ -1,85 +1,94 @@
 //padding 0
 .#{$prefix-name}pd-0 {
-  padding: 0;
+	padding: 0;
 }
 
 //px padding
-@for $i from 1 through 50 {
-  .#{$prefix-name}pd-#{$i} {
-    padding: #{$i}px;
-  }
-  .#{$prefix-name}pd-l-#{$i} {
-    padding-left: #{$i}px;
-  }
-  .#{$prefix-name}pd-r-#{$i} {
-    padding-right: #{$i}px;
-  }
-  .#{$prefix-name}pd-t-#{$i} {
-    padding-top: #{$i}px;
-  }
-  .#{$prefix-name}pd-b-#{$i} {
-    padding-bottom: #{$i}px;
-  }
-  .#{$prefix-name}pd-tb-#{$i} {
-    padding-top: #{$i}px;
-    padding-bottom: #{$i}px;
-  }
-  .#{$prefix-name}pd-lr-#{$i} {
-    padding-left: #{$i}px;
-    padding-right: #{$i}px;
-  }
+@if $use-px-padding {
+	@for $i from $padding-start through $padding-end {
+		.#{$prefix-name}pd-#{$i} {
+			padding: #{$i}px;
+		}
+		.#{$prefix-name}pd-l-#{$i} {
+			padding-left: #{$i}px;
+		}
+		.#{$prefix-name}pd-r-#{$i} {
+			padding-right: #{$i}px;
+		}
+		.#{$prefix-name}pd-t-#{$i} {
+			padding-top: #{$i}px;
+		}
+		.#{$prefix-name}pd-b-#{$i} {
+			padding-bottom: #{$i}px;
+		}
+		.#{$prefix-name}pd-tb-#{$i} {
+			padding-top: #{$i}px;
+			padding-bottom: #{$i}px;
+		}
+		.#{$prefix-name}pd-lr-#{$i} {
+			padding-left: #{$i}px;
+			padding-right: #{$i}px;
+		}
+	}
 }
 
 //rem padding
-@for $i from 1 through 50 {
-  .#{$prefix-name}pd-#{$i}rp {
-    padding: rem($i);
-  }
-  .#{$prefix-name}pd-l-#{$i}rp {
-    padding-left: rem($i);
-  }
-  .#{$prefix-name}pd-r-#{$i}rp {
-    padding-right: rem($i);
-  }
-  .#{$prefix-name}pd-t-#{$i}rp {
-    padding-top: rem($i);
-  }
-  .#{$prefix-name}pd-b-#{$i}rp {
-    padding-bottom: rem($i);
-  }
-  .#{$prefix-name}pd-tb-#{$i}rp {
-    padding-top: rem($i);
-    padding-bottom: rem($i);
-  }
-  .#{$prefix-name}pd-lr-#{$i}rp {
-    padding-left: rem($i);
-    padding-right: rem($i);
-  }
+@if $use-rp-padding {
+	@for $i from $padding-start through $padding-end {
+		.#{$prefix-name}pd-#{$i}rp {
+			padding: rem($i);
+		}
+		.#{$prefix-name}pd-l-#{$i}rp {
+			padding-left: rem($i);
+		}
+		.#{$prefix-name}pd-r-#{$i}rp {
+			padding-right: rem($i);
+		}
+		.#{$prefix-name}pd-t-#{$i}rp {
+			padding-top: rem($i);
+		}
+		.#{$prefix-name}pd-b-#{$i}rp {
+			padding-bottom: rem($i);
+		}
+		.#{$prefix-name}pd-tb-#{$i}rp {
+			padding-top: rem($i);
+			padding-bottom: rem($i);
+		}
+		.#{$prefix-name}pd-lr-#{$i}rp {
+			padding-left: rem($i);
+			padding-right: rem($i);
+		}
+	}
 }
 
 //rpx padding
-@for $i from 1 through 50 {
-  .#{$prefix-name}pd-#{$i}rpx {
-    padding: rpx($i);
-  }
-  .#{$prefix-name}pd-l-#{$i}rpx {
-    padding-left: rpx($i);
-  }
-  .#{$prefix-name}pd-r-#{$i}rpx {
-    padding-right: rpx($i);
-  }
-  .#{$prefix-name}pd-t-#{$i}rpx {
-    padding-top: rpx($i);
-  }
-  .#{$prefix-name}pd-b-#{$i}rpx {
-    padding-bottom: rpx($i);
-  }
-  .#{$prefix-name}pd-tb-#{$i}rpx {
-    padding-top: rpx($i);
-    padding-bottom: rpx($i);
-  }
-  .#{$prefix-name}pd-lr-#{$i}rpx {
-    padding-left: rpx($i);
-    padding-right: rpx($i);
-  }
+@if $use-rpx-padding {
+	@for $i from $padding-start through $padding-end {
+		.#{$prefix-name}pd-#{$i}rpx {
+			padding: rpx($i);
+		}
+		.#{$prefix-name}pd-l-#{$i}rpx {
+			padding-left: rpx($i);
+		}
+		.#{$prefix-name}pd-r-#{$i}rpx {
+			padding-right: rpx($i);
+		}
+		.#{$prefix-name}pd-t-#{$i}rpx {
+			padding-top: rpx($i);
+		}
+		.#{$prefix-name}pd-b-#{$i}rpx {
+			padding-bottom: rpx($i);
+		}
+		.#{$prefix-name}pd-tb-#{$i}rpx {
+			padding-top: rpx($i);
+			padding-bottom: rpx($i);
+		}
+		.#{$prefix-name}pd-lr-#{$i}rpx {
+			padding-left: rpx($i);
+			padding-right: rpx($i);
+		}
+	}
 }
+
+
+

@@ -1,7 +1,10 @@
 @import "link-mixin";
 
 //链接相关
-@each $name, $color in $color-group {
-  @include link($name, $color);
+@if $use-link {
+	@each $name, $color in $color-group {
+		@include link($name, $color);
+	}
 }
+
 

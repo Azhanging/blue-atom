@@ -2,28 +2,40 @@
 
 /*加粗*/
 .#{$prefix-name}f-b {
-  font-weight: bold;
+	font-weight: bold;
 }
 
-//rem 字体大小 12px -> 35px 的 rem
-@for $i from 10 through 35 {
-  .#{$prefix-name}f-#{$i}rp {
-    @include font-size(rem($i));
-  }
+//使用px font
+@if $use-px-font {
+	/*px 字体大小 $font-size-start px -> $font-size-end px*/
+	@for $i from $font-size-start through $font-size-end {
+		.#{$prefix-name}f-#{$i} {
+			@include font-size(#{$i+ 'px'});
+		}
+	}
 }
 
-//rpx 字体大小 10px -> 35px 的 rpx
-@for $i from 10 through 35 {
-  .#{$prefix-name}f-#{$i}rpx {
-    @include font-size(rpx($i));
-  }
+//使用rp font
+@if $use-rp-font {
+	//rem 字体大小 $font-size-start px -> $font-size-end px 的 rem
+	@for $i from $font-size-start through $font-size-end {
+		.#{$prefix-name}f-#{$i}rp {
+			@include font-size(rem($i));
+		}
+	}
 }
 
-/*px 字体大小 10px -> 35px*/
-@for $i from 10 through 35 {
-  .#{$prefix-name}f-#{$i} {
-    @include font-size(#{$i+ 'px'});
-  }
+//使用rpx font
+@if $use-rpx-font {
+	//rpx 字体大小 $font-size-start px -> $font-size-end px 的 rpx
+	@for $i from $font-size-start through $font-size-end {
+		.#{$prefix-name}f-#{$i}rpx {
+			@include font-size(rpx($i));
+		}
+	}
 }
+
+
+
 
 

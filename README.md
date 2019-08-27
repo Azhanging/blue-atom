@@ -2,6 +2,57 @@
 
 默认所有的class都带上了bc-的前缀名，可修改$prefix-name相关的配置修改
 
+#### 使用模块配置
+```scss
+
+//是否使用箭头
+$use-arrow: false !default;
+
+
+//字体大小相关
+$font-size-start: 10 !default;
+$font-size-end: 35 !default;
+
+//是否使用指定单位的font
+$use-px-font: true !default;
+$use-rp-font: true !default;
+$use-rpx-font: true !default;
+
+//配置padding的起始值
+$padding-start: 1 !default;
+$padding-end: 50 !default;
+
+//配置margin的起始值
+$margin-start: 1 !default;
+$margin-end: 50 !default;
+
+//是否使用指定单位的padding
+$use-px-padding: true !default;
+$use-rp-padding: true !default;
+$use-rpx-padding: true !default;
+
+//是否使用指定单位的margin
+$use-px-margin: true !default;
+$use-rp-margin: true !default;
+$use-rpx-margin: true !default;
+
+//是否使用flex
+$use-flex: true !default;
+
+//是否使用栅格系统
+$use-grid: true !default;
+
+//使用百分比宽度
+$use-width-percentage: true !default;
+
+//是否使用链接相关内容
+$use-link: true !default;
+
+//是否使用表格相关内容
+$use-table: true !default;
+
+```
+
 
 ### coloe上的配置
 
@@ -15,12 +66,12 @@ $color-666: #666;
 $color-333: #333;
 $color-e5e: #e5e5e5;
 $color-f4f: #f4f4f4;
-$color-org: #ff8400;
-$color-green: #008000;
-$color-red: red;
-$color-blue: blue;
-$color-white: white;
-$color-grey: #ccc;
+$color-org: #ff8400 !default;
+$color-green: #008000 !default;
+$color-red: red !default;
+$color-blue: blue !default;
+$color-white: white !default;
+$color-grey: #ccc !default;
 $color-default: #666 !default;
 $color-primary: #337ab7 !default;
 $color-info: #5bc0de !default;
@@ -29,7 +80,7 @@ $color-warning: #ff8400 !default;
 $color-danger: #fe6270 !default;
 ```
 
-存在default的为可配置的颜色参数
+存在default的为可配置的参数
 
 #### 以下为颜色组
 
