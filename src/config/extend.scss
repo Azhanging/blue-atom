@@ -1,32 +1,37 @@
 //border盒子
 %border-box {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /*清除浮动*/
 %clear-float {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 //初始化列表信息
 %reset-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
 
 //表单的padding
 %pd-4-12 {
-  padding: 4px 12px;
+	@if ($platform == 'h5') {
+		padding: rem(4) rem(12);
+	}
+	@else if($platform == 'mp') {
+		padding: rpx(4) rpx(12);
+	}
 }
 
 %default-line-height {
-  line-height: 1.42857143;
+	line-height: 1.42857143;
 }

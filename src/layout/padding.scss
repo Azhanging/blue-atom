@@ -32,60 +32,61 @@
 	}
 }
 
-//rem padding
-@if $use-rp-padding {
-	@for $i from $padding-start through $padding-end {
-		.#{$prefix-name}pd-#{$i}rp {
-			padding: rem($i);
-		}
-		.#{$prefix-name}pd-l-#{$i}rp {
-			padding-left: rem($i);
-		}
-		.#{$prefix-name}pd-r-#{$i}rp {
-			padding-right: rem($i);
-		}
-		.#{$prefix-name}pd-t-#{$i}rp {
-			padding-top: rem($i);
-		}
-		.#{$prefix-name}pd-b-#{$i}rp {
-			padding-bottom: rem($i);
-		}
-		.#{$prefix-name}pd-tb-#{$i}rp {
-			padding-top: rem($i);
-			padding-bottom: rem($i);
-		}
-		.#{$prefix-name}pd-lr-#{$i}rp {
-			padding-left: rem($i);
-			padding-right: rem($i);
-		}
-	}
-}
-
 //rpx padding
 @if $use-rpx-padding {
-	@for $i from $padding-start through $padding-end {
-		.#{$prefix-name}pd-#{$i}rpx {
-			padding: rpx($i);
+	@if $platform == 'h5' {
+		//h5计算规则
+		@for $i from $padding-start through $padding-end {
+			.#{$prefix-name}pd-#{$i}rpx {
+				padding: rem($i);
+			}
+			.#{$prefix-name}pd-l-#{$i}rpx {
+				padding-left: rem($i);
+			}
+			.#{$prefix-name}pd-r-#{$i}rpx {
+				padding-right: rem($i);
+			}
+			.#{$prefix-name}pd-t-#{$i}rpx {
+				padding-top: rem($i);
+			}
+			.#{$prefix-name}pd-b-#{$i}rpx {
+				padding-bottom: rem($i);
+			}
+			.#{$prefix-name}pd-tb-#{$i}rpx {
+				padding-top: rem($i);
+				padding-bottom: rem($i);
+			}
+			.#{$prefix-name}pd-lr-#{$i}rpx {
+				padding-left: rem($i);
+				padding-right: rem($i);
+			}
 		}
-		.#{$prefix-name}pd-l-#{$i}rpx {
-			padding-left: rpx($i);
-		}
-		.#{$prefix-name}pd-r-#{$i}rpx {
-			padding-right: rpx($i);
-		}
-		.#{$prefix-name}pd-t-#{$i}rpx {
-			padding-top: rpx($i);
-		}
-		.#{$prefix-name}pd-b-#{$i}rpx {
-			padding-bottom: rpx($i);
-		}
-		.#{$prefix-name}pd-tb-#{$i}rpx {
-			padding-top: rpx($i);
-			padding-bottom: rpx($i);
-		}
-		.#{$prefix-name}pd-lr-#{$i}rpx {
-			padding-left: rpx($i);
-			padding-right: rpx($i);
+	} @else if ($platform == 'mp') {
+		//小程序计算规则
+		@for $i from $padding-start through $padding-end {
+			.#{$prefix-name}pd-#{$i}rpx {
+				padding: rpx($i);
+			}
+			.#{$prefix-name}pd-l-#{$i}rpx {
+				padding-left: rpx($i);
+			}
+			.#{$prefix-name}pd-r-#{$i}rpx {
+				padding-right: rpx($i);
+			}
+			.#{$prefix-name}pd-t-#{$i}rpx {
+				padding-top: rpx($i);
+			}
+			.#{$prefix-name}pd-b-#{$i}rpx {
+				padding-bottom: rpx($i);
+			}
+			.#{$prefix-name}pd-tb-#{$i}rpx {
+				padding-top: rpx($i);
+				padding-bottom: rpx($i);
+			}
+			.#{$prefix-name}pd-lr-#{$i}rpx {
+				padding-left: rpx($i);
+				padding-right: rpx($i);
+			}
 		}
 	}
 }

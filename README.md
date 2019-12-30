@@ -4,19 +4,14 @@
 
 #### 使用模块配置
 ```scss
-
-//是否使用箭头
-$use-arrow: false !default;
-
-
 //字体大小相关
 $font-size-start: 10 !default;
 $font-size-end: 35 !default;
 
-//是否使用指定单位的font
+// 是否使用指定单位的font
+// 最新版本移除rp单位，使用通过$platform区分使用端，h5||mp分发对于端的rpx计算
 $use-px-font: true !default;
-$use-rp-font: true !default;
-$use-rpx-font: true !default;
+$use-rpx-font: true !default;  
 
 //配置padding的起始值
 $padding-start: 1 !default;
@@ -28,12 +23,10 @@ $margin-end: 50 !default;
 
 //是否使用指定单位的padding
 $use-px-padding: true !default;
-$use-rp-padding: true !default;
 $use-rpx-padding: true !default;
 
 //是否使用指定单位的margin
 $use-px-margin: true !default;
-$use-rp-margin: true !default;
 $use-rpx-margin: true !default;
 
 //是否使用flex
@@ -58,9 +51,9 @@ $use-table: true !default;
 
 ```scss
 //颜色配置信息
-$color-base: #00abff !default;
+$color-base: #0f8cca !default;
 //浅色的base
-$color-light-base: #00abff !default;
+$color-light-base: #0f8cca !default;
 $color-999: #999;
 $color-666: #666;
 $color-333: #333;
@@ -138,11 +131,10 @@ $color-group:
 
 ```html
 .bc-f-10
-.bc-f-10rp
 .bc-f-10rpx
 ```
 
-不带代为的为px像素，rp为通过px->rem，rpx为小程序内使用的px->rpx
+不带代为的为px像素，rpx在h5为px->rem,小程序内使用为px->rpx
 
 按具体的使用环境选择使用的单位字体，
 计算公式参考config/viewport.scss查看，
@@ -166,14 +158,6 @@ $color-group:
 ```
 .bc-bg-(color-name)
 ```
-
-### 箭头相关
-
-```
-.bc-arrow .bc-arrow-l .bc-arrow-small .bc-arrow-(color-name)
-```
-
-使用箭头样式需要调用四个class，箭头，箭头方向，箭头大小，箭头颜色
 
 
 

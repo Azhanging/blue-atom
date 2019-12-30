@@ -1,9 +1,0 @@
-@mixin arrow() {
-	// 设置border的颜色
-	@each $name, $color in $color-group {
-		&.#{$prefix-name}arrow-#{$name}:after {
-			border-left-color: #{$color};
-			border-top-color: #{$color};
-		}
-	}
-}
