@@ -1,0 +1,129 @@
+@if $use-grid {
+	//行
+	.#{$bc-prefix-name}row {
+		width: 100%;
+		@extend %border-box;
+		@extend %clear-float;
+	}
+
+	//栅格布局-列
+	//xs
+	%xs-bb-l {
+		box-sizing: border-box;
+		float: left;
+		min-height: 1px;
+	}
+
+	@for $i from 1 through 12 {
+		.#{$bc-prefix-name}col-xs-#{$i} {
+			width: 100%/12*$i;
+			@extend %xs-bb-l;
+		}
+		.#{$bc-prefix-name}col-xs-offset-#{$i} {
+			margin-left: 100%/12*$i;
+			@extend %xs-bb-l;
+		}
+	}
+
+	//sm
+	@media (min-width: $sm) {
+		%sm-bb-l {
+			box-sizing: border-box;
+			float: left;
+			min-height: 1px;
+		}
+		@for $i from 1 through 12 {
+			.#{$bc-prefix-name}col-sm-#{$i} {
+				width: 100%/12*$i;
+				@extend %sm-bb-l;
+			}
+			.#{$bc-prefix-name}col-sm-offset-#{$i} {
+				margin-left: 100%/12*$i;
+				@extend %sm-bb-l;
+			}
+		}
+	}
+
+	//md
+	@media (min-width: $md) {
+		%md-bb-l {
+			box-sizing: border-box;
+			float: left;
+			min-height: 1px;
+		}
+		@for $i from 1 through 12 {
+			.#{$bc-prefix-name}col-md-#{$i} {
+				width: 100%/12*$i;
+				@extend %md-bb-l
+			}
+			.#{$bc-prefix-name}col-md-offset-#{$i} {
+				margin-left: 100%/12*$i;
+				@extend %md-bb-l
+			}
+		}
+	}
+
+	//lg
+	@media (min-width: $lg) {
+		%lg-bb-l {
+			box-sizing: border-box;
+			float: left;
+			min-height: 1px;
+		}
+		@for $i from 1 through 12 {
+			.#{$bc-prefix-name}col-lg-#{$i} {
+				width: 100%/12*$i;
+				@extend %lg-bb-l;
+			}
+			.#{$bc-prefix-name}col-lg-offset-#{$i} {
+				margin-left: 100%/12*$i;
+				@extend %lg-bb-l;
+			}
+		}
+	}
+
+	//栅格隐藏节点
+	//xs
+	@media (max-width: $xs) {
+		.#{$bc-prefix-name}hidden-#{$xs-name} {
+			display: none !important
+		}
+	}
+
+	//sm
+	@media (min-width: $xs + 1) and (max-width: $md - 1) {
+		.#{$bc-prefix-name}hidden-#{$sm-name} {
+			display: none !important
+		}
+	}
+
+	//md
+	@media (min-width: $md) and (max-width: $lg - 1) {
+		.#{$bc-prefix-name}hidden-#{$md-name} {
+			display: none !important
+		}
+	}
+
+	//lg
+	@media (min-width: $lg) {
+		.#{$bc-prefix-name}hidden-#{$lg-name} {
+			display: none !important
+		}
+	}
+
+	//栅格占位节点
+	@each $name, $size in $grid-group {
+		@if $name == xs {
+			.#{$bc-prefix-name}visibility-#{$name} {
+				visibility: hidden;
+			}
+		} @else {
+			@media (min-width: #{$size}) {
+				.#{$bc-prefix-name}visibility-#{$name} {
+					visibility: hidden;
+				}
+			}
+		}
+	}
+}
+

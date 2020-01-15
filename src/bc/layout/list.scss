@@ -1,0 +1,35 @@
+//初始化列表
+.#{$bc-prefix-name}reset-ul {
+	@extend %reset-ul;
+}
+
+//图文列表
+.#{$bc-prefix-name}media {
+	@extend %reset-ul;
+	@extend %border-box;
+	@extend %clear-float;
+	a {
+		text-decoration: none;
+	}
+
+	.#{$bc-prefix-name}media-left {
+		float: left;
+		margin-right: 12px;
+	}
+
+	.#{$bc-prefix-name}media-right {
+		float: right;
+		margin-left: 12px;
+	}
+
+	.#{$bc-prefix-name}media-left, .#{$bc-prefix-name}media-right {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.#{$bc-prefix-name}media-body {
+		overflow: hidden;
+		word-break: break-all;
+	}
+
+}

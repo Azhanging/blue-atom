@@ -7,7 +7,7 @@ var config = require('./config'),
   autoprefixer = require('gulp-autoprefixer');
 
 var src = {
-  sass: './src/main/blue-component.scss', //输入路径
+  sass: './src/main/blue-zone.scss', //输入路径
   dist: './dist/css/', //输出路径
   watch: {
     sass: {

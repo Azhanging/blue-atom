@@ -1,6 +1,6 @@
 # blue-component
 
-默认所有的class都带上了bc-的前缀名，可修改$prefix-name相关的配置修改
+默认所有的class都带上了bc-的前缀名，可修改$bc-prefix-name相关的配置修改
 
 #### 使用模块配置
 ```scss

@@ -1,0 +1,19 @@
+@mixin btn($name, $color) {
+  &.#{$bc-prefix-name}btn-#{$name} {
+    color: white;
+    background-color: $color;
+    border-color: $color;
+    &:hover {
+      cursor: pointer;
+      background-color: $color;
+    }
+    &:active, &.active {
+      background-color: $color;
+    }
+    &.#{$bc-prefix-name}btn-line {
+      color: $color;
+      background-color: #fff;
+      border-color: $color;
+    }
+  }
+}

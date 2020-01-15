@@ -1,12 +1,11 @@
 //配置
 @import '../config/index';
 
-//计算px转化对应的rem值
-@function rem($size) {
-  @return #{$size/$viewport-font-size/($device-width/100)+'rem'};
-}
-
 //小程序rpx的转化 以2倍被转化
 @function rpx($size) {
-  @return #{$size * $wx-viewport + 'rpx'};
+	@if ($platform == 'mp') {
+		@return #{$size * $wx-viewport + 'rpx'};
+	} @else if ($platform == 'h5') {
+		@return #{$size/$viewport-font-size/($device-width/100)+'rem'};
+	}
 }

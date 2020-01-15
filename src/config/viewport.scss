@@ -1,11 +1,11 @@
 //设备宽度，以iphone6,7,8的分辨率为基准
-$device-width: 375;
+$device-width: 750;
 
 //rem字体
-$rem-font-size: .8;
+$rem-font-size: 1.6;
 
 //rem字体解析的px值
-$px-font-size: 12;
+$px-font-size: 24;
 
 //最大屏幕后不执行vw单位,px单位
 $viewport-min-width: 650;
@@ -14,4 +14,4 @@ $viewport-min-width: 650;
 $viewport-font-size: $px-font-size/$rem-font-size/($device-width/100);
 
 //微信viewport
-$wx-viewport: 2;
+$wx-viewport: 1;

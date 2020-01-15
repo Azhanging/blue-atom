@@ -1,0 +1,13 @@
+//box-sizing:border-box
+.#{$bc-prefix-name}bs-bb {
+  @extend %border-box;
+}
+
+//v-cloak in vue
+[v-cloak] {
+  display: none;
+}
+
+.#{$bc-prefix-name}overflow-hide {
+  overflow: hidden;
+}

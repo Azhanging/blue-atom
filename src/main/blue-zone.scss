@@ -1,0 +1,13 @@
+//配置
+@import '../config/index';
+//方法
+@import "../function/index";
+//normalize
+@import '../normalize/index';
+//设备viewport font-size
+@import '../viewport/index';
+
+//bc相关
+@import './bc';
+//bv相关
+@import './bv';
