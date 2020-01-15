@@ -1,0 +1,13 @@
+//display hide
+.#{$prefix-name}hide {
+  display: none;
+}
+
+//display block inline-block
+.#{$prefix-name}block {
+  display: block;
+}
+
+.#{$prefix-name}inline-block {
+  display: inline-block;
+}

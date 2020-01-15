@@ -1,0 +1,32 @@
+@import './font-mixin';
+
+/*加粗*/
+.#{$prefix-name}f-b {
+	font-weight: bold;
+}
+
+//使用px font
+@if $use-px-font {
+	/*px 字体大小 $font-size-start px -> $font-size-end px*/
+	@for $i from $font-size-start through $font-size-end {
+		.#{$prefix-name}f-#{$i} {
+			@include font-size(#{$i+ 'px'});
+		}
+	}
+}
+
+// 使用rpx font,通过的$platform区分编译使用h5还是小程序计算
+// 统一使用rpx作为单位使用
+@if $use-rpx-font {
+	//rpx 字体大小 $font-size-start px -> $font-size-end px 的 rpx
+	@for $i from $font-size-start through $font-size-end {
+		.#{$prefix-name}f-#{$i}rpx {
+			@include font-size(rpx($i));
+		}
+	}
+}
+
+
+
+
+

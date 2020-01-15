@@ -1,0 +1,45 @@
+//设置边框颜色
+@mixin border($name,$color) {
+	.#{$prefix-name}bd-l-#{$name} {
+		border-left: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-r-#{$name} {
+		border-right: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-lr-#{$name} {
+		border-left: 1px solid #{$color};
+		border-right: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-t-#{$name} {
+		border-top: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-b-#{$name} {
+		border-bottom: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-tb-#{$name} {
+		border-top: 1px solid #{$color};
+		border-bottom: 1px solid #{$color};
+	}
+	.#{$prefix-name}bd-#{$name} {
+		border: 1px solid #{$color};
+	}
+}
+
+//设置边框
+@mixin border-weight($val){
+	.#{$prefix-name}bd-w-#{$val} {
+		border-width: #{$val}px;
+	}
+	.#{$prefix-name}bd-w-t-#{$val} {
+		border-top-width: #{$val}px;
+	}
+	.#{$prefix-name}bd-w-b-#{$val} {
+		border-bottom-width: #{$val}px;
+	}
+	.#{$prefix-name}bd-w-l-#{$val} {
+		border-left-width: #{$val}px;
+	}
+	.#{$prefix-name}bd-w-r-#{$val} {
+		border-right-width: #{$val}px;
+	}
+}

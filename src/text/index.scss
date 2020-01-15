@@ -1,0 +1,71 @@
+@import './text-mixin';
+
+//字体居中左右
+.#{$prefix-name}t-c {
+	text-align: center;
+}
+
+.#{$prefix-name}t-l {
+	text-align: left;
+}
+
+.#{$prefix-name}t-r {
+	text-align: right;
+}
+
+//基线
+.#{$prefix-name}v-m {
+	* {
+		vertical-align: middle;
+	}
+}
+
+.#{$prefix-name}v-t {
+	* {
+		vertical-align: top;
+	}
+}
+
+.#{$prefix-name}v-b {
+	* {
+		vertical-align: bottom;
+	}
+}
+
+//多行省略
+.#{$prefix-name}t-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	@for $i from 2 through 5 {
+		&.#{$prefix-name}t-ellipsis-#{$i} {
+			-webkit-line-clamp: $i;
+		}
+	}
+}
+
+//超出省略
+.#{$prefix-name}t-hide {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+//字体颜色
+@each $name, $color in $color-group {
+	.#{$prefix-name}t-#{$name} {
+		@include text-color($color);
+	}
+}
+
+//文字换行
+.#{$prefix-name}wb-ba {
+	word-break: break-all;
+}
+
+//文字换行
+.#{$prefix-name}ws-nm {
+	white-space: normal;
+}

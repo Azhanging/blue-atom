@@ -1,5 +1,0 @@
-@mixin background($name,$color) {
-	.#{$bc-prefix-name}bg-#{$name} {
-		background-color: #{$color};
-	}
-}

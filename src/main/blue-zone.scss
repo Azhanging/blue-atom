@@ -6,8 +6,17 @@
 @import '../normalize/index';
 //设备viewport font-size
 @import '../viewport/index';
-
-//bc相关
-@import './bc';
-//bv相关
-@import './bv';
+//字体相关
+@import '../font/index';
+//文本相关
+@import '../text/index';
+//布局相关
+@import '../layout/index';
+//边框相关
+@import '../border/index';
+//背景颜色相关
+@import '../background/index';
+//链接相关
+@import '../link/index';
+//表单相关
+@import '../form/index';
