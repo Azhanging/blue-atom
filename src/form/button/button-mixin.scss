@@ -5,10 +5,10 @@
 		border-color: $color;
 		&:hover {
 			cursor: pointer;
-			background-color: adjust-hue($color, 5);
 		}
-		&:active, &.active {
+		&:hover, &:active, &.active {
 			background-color: adjust-hue($color, 5);
+			border-color: adjust-hue($color, 5);
 		}
 		&.#{$prefix-name}btn-plain {
 			color: $color;
