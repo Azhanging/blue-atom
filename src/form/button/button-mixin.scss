@@ -3,10 +3,8 @@
 		color: white;
 		background-color: $color;
 		border-color: $color;
-		&:hover {
-			cursor: pointer;
-		}
 		&:hover, &:active, &.active {
+			cursor: pointer;
 			background-color: adjust-hue($color, 5);
 			border-color: adjust-hue($color, 5);
 		}

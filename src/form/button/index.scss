@@ -9,6 +9,9 @@
 	background-color: white;
 	@extend %form-elm-pd;
 	@extend %border-box;
+	&[disabled] {
+		border-color: transparent !important;
+	}
 }
 
 //btn color
