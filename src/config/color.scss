@@ -23,10 +23,8 @@ $color-success: #44cb7f !default;
 $color-warning: #ff8400 !default;
 $color-danger: #fe6270 !default;
 
-
 // color 颜色组
-$color-group:
-	('base', $color-base),
+$color-group: ('base', $color-base),
 	('light-base', $color-light-base),
 	('999', $color-999),
 	('666', $color-666),

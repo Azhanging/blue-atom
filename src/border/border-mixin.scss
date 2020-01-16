@@ -26,7 +26,7 @@
 }
 
 //设置边框
-@mixin border-weight($val){
+@mixin border-weight($val) {
 	.#{$prefix-name}bd-w-#{$val} {
 		border-width: #{$val}px;
 	}

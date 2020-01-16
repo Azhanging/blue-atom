@@ -10,7 +10,7 @@
 		&:active, &.active {
 			background-color: adjust-hue($color, 5);
 		}
-		&.#{$prefix-name}btn-line {
+		&.#{$prefix-name}btn-plain {
 			color: $color;
 			background-color: #fff;
 			border-color: $color;

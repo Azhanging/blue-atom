@@ -29,10 +29,10 @@ gulp.task('sass', function () {
     }))
     .pipe(header([
       '/*',
-      '*	blue-component.css v' + config.version,
+      '*	blue-zone.css v' + config.version,
       '*	(c) 2016-2020 Blue',
       '*	Released under the MIT License.',
-      '*	https://github.com/azhanging/blue-component',
+      '*	https://github.com/azhanging/blue-zone',
       '*	time:${new Date()}',
       '*/',
       ''
