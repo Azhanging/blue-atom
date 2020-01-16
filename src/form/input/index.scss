@@ -1,8 +1,8 @@
 //输入框样式
 .#{$prefix-name}input {
 	color: #666;
-	border: none;
 	display: inline-block;
+	border:1px solid #e5e5e5;
 	outline: none;
 	@extend %border-box;
 	@extend %form-elm-pd;
