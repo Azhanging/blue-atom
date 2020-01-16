@@ -3,10 +3,18 @@
 		color: white;
 		background-color: $color;
 		border-color: $color;
-		&:hover, &:active, &.active {
-			cursor: pointer;
-			background-color: adjust-hue($color, 5);
-			border-color: adjust-hue($color, 5);
+		@if ($platform == 'h5') {
+			&:hover, &.active {
+				cursor: pointer;
+				background-color: adjust-hue($color, 5);
+				border-color: adjust-hue($color, 5);
+			}
+		} @else {
+			&.hover, &.active {
+				cursor: pointer;
+				background-color: adjust-hue($color, 5);
+				border-color: adjust-hue($color, 5);
+			}
 		}
 		&.#{$prefix-name}btn-plain {
 			color: $color;
