@@ -1,0 +1,52 @@
+//输入框样式
+.#{$prefix-name}input {
+	color: #666;
+	display: inline-block;
+	border:1px solid #e5e5e5;
+	outline: none;
+	@extend %border-box;
+	@extend %form-elm-pd;
+	&[disabled] {
+		background-color: #eee;
+		cursor: not-allowed;
+	}
+}
+
+//select 去除默认样式
+.#{$prefix-name}select-down-icon {
+	position: relative;
+	select {
+		padding-right: 25px;
+	}
+	&:after {
+		position: absolute;
+		right: 6px;
+		top: 42%;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-left-color: #999;
+		transform: rotate(90deg);
+		content: ""
+	}
+}
+
+$input-pd: rpx(40) rpx(24);
+
+//组件input使用
+.#{$prefix-name}form-item {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e5e5e5;
+	//label样式
+	.#{$prefix-name}form-item-label {
+		width: rpx(120);
+		font-weight: 400;
+		padding: $input-pd;
+	}
+	//elm容器
+	.#{$prefix-name}form-item-elm {
+		flex: 1;
+		padding: $input-pd;
+	}
+}

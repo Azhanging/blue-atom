@@ -1,6 +1,6 @@
-# blue-component
+# blue-zone
 
-默认所有的class都带上了bc-的前缀名，可修改$bc-prefix-name相关的配置修改
+默认所有的class都带上了bz-的前缀名，可修改$prefix-name相关的配置修改
 
 #### 使用模块配置
 ```scss
@@ -107,21 +107,21 @@ $color-group:
 ### 字体相关
 
 ```html
-.bc-t-c  文字居中
-.bc-t-l  文字左对齐
-.bc-t-r  文字右对齐
-.bc-v-m 基线居中
-.bc-v-t 基线向上对齐
-.bc-v-b 基线向下对齐
+.bz-t-c  文字居中
+.bz-t-l  文字左对齐
+.bz-t-r  文字右对齐
+.bz-v-m 基线居中
+.bz-v-t 基线向上对齐
+.bz-v-b 基线向下对齐
 ```
 
 ##### 字体颜色为：
 
 ```html
-.bc-t-(color-name)
+.bz-t-(color-name)
 如：
-  .bc-t-333
-  .bc-t-success
+  .bz-t-333
+  .bz-t-success
 ```
 
 
@@ -130,8 +130,8 @@ $color-group:
 字体的单位存在3中,
 
 ```html
-.bc-f-10
-.bc-f-10rpx
+.bz-f-10
+.bz-f-10rpx
 ```
 
 不带代为的为px像素，rpx在h5为px->rem,小程序内使用为px->rpx
@@ -145,18 +145,18 @@ $color-group:
 包含两个组合边框 tb lr ,和四个反向独立的边框定义 t r b l;
 
 ```html
-.bc-bd-lr-(color-name)
-.bc-bd-l-(color-name)
-.bc-bd-r-(color-name)
-.bc-bd-tb-(color-name)
-.bc-bd-t-(color-name)
-.bc-bd-b-(color-name)
+.bz-bd-lr-(color-name)
+.bz-bd-l-(color-name)
+.bz-bd-r-(color-name)
+.bz-bd-tb-(color-name)
+.bz-bd-t-(color-name)
+.bz-bd-b-(color-name)
 ```
 
 ### 背景相关
 
 ```
-.bc-bg-(color-name)
+.bz-bg-(color-name)
 ```
 
 

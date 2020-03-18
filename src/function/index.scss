@@ -6,6 +6,7 @@
 	@if ($platform == 'mp') {
 		@return #{$size * $wx-viewport + 'rpx'};
 	} @else if ($platform == 'h5') {
-		@return #{$size/$viewport-font-size/($device-width/100)+'rem'};
+		//设置750计算会出现2vw无法正常计算padding的rem值
+		@return #{($size/$h5-viewport)/$viewport-font-size/($device-width/100)+'rem'};
 	}
 }

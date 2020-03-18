@@ -1,0 +1,13 @@
+//清除浮动
+.#{$prefix-name}c-f {
+	@extend %clear-float;
+}
+
+//浮动
+.#{$prefix-name}fl-l {
+	float: left;
+}
+
+.#{$prefix-name}fl-r {
+	float: right;
+}

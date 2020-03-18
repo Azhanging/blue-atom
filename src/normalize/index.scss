@@ -278,24 +278,30 @@ select {
 }
 
 /*--- 微信小程序 ---*/
-
-navigator {
-	display: inline-block;
-	background-color: transparent;
-}
-
-button {
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
-	height: auto;
-	line-height: initial;
-	.button-hover {
+@if ($platform == 'mp') {
+	navigator {
+		display: inline-block;
 		background-color: transparent;
+	}
+
+	button {
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+		height: auto;
+		line-height: initial;
+		.button-hover {
+			background-color: transparent;
+		}
+	}
+
+	button::after {
+		border: none;
+		background-color: transparent;
+	}
+	input {
+		height: initial;
 	}
 }
 
-button::after {
-	border: none;
-	background-color: transparent;
-}
+
