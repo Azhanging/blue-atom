@@ -7,8 +7,8 @@ var config = require('./config'),
   autoprefixer = require('gulp-autoprefixer');
 
 var src = {
-  sass: './src/main/blue-zone.scss', //输入路径
-  dist: './dist/css/', //输出路径
+  sass: './src/main/blue-atom.scss', //输入路径
+  dist: './dist/css', //输出路径
   watch: {
     sass: {
       path: './src/**/*.scss',
@@ -29,10 +29,10 @@ gulp.task('sass', function () {
     }))
     .pipe(header([
       '/*',
-      '*	blue-zone.css v' + config.version,
+      '*	blue-atom.css v' + config.version,
       '*	(c) 2016-2020 Blue',
       '*	Released under the MIT License.',
-      '*	https://github.com/azhanging/blue-zone',
+      '*	https://github.com/azhanging/blue-atom',
       '*	time:${new Date()}',
       '*/',
       ''

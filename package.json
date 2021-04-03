@@ -1,6 +1,6 @@
 {
-  "name": "blue-zone",
-  "version": "1.0.1",
+  "name": "blue-atom",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "gulp"
