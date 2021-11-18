@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('./config'),
+var packageJson = require('./package.json'),
   gulp = require('gulp'),
   sass = require('gulp-sass'),
   header = require('gulp-header'),
@@ -29,7 +29,7 @@ gulp.task('sass', function () {
     }))
     .pipe(header([
       '/*',
-      '*	blue-atom.css v' + config.version,
+      '*	blue-atom.css v' + packageJson.version,
       '*	(c) 2016-2020 Blue',
       '*	Released under the MIT License.',
       '*	https://github.com/azhanging/blue-atom',
