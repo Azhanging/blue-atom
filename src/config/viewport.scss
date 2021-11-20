@@ -4,11 +4,14 @@ $h5-viewport: 2 !default;
 //微信viewport
 $wx-viewport: 1 !default;
 
-//设备的基准宽度
-$device-base-width: 750 !default;
+//屏幕的基准宽度
+$screen-base-width: 750 !default;
+
+//屏幕最大的原始宽度
+$screen-min-raw-width: 3000 !default;
 
 //设备宽度，以iphone6,7,8的分辨率为基准
-$viewport-width: $device-base-width / $h5-viewport;
+$viewport-width: $screen-base-width / $h5-viewport;
 
 //换算规则 0.8rem === 12px
 //rem字体
@@ -17,11 +20,8 @@ $rem-font-size: 0.8 !default;
 //rem字体解析的px值
 $px-font-size: 12 !default;
 
-//设备最大的原始宽度
-$viewport-max-raw-width: 3000 !default;
-
 //最大屏幕后不执行vw单位,px单位（考虑去除viewport）
-$viewport-max-width: $viewport-max-raw-width / $h5-viewport;
+$viewport-min-width: $screen-min-raw-width / $h5-viewport;
 
 // rem字体解析的px值/ rem字体 / (设备宽度 / 100vw) =  viewport-font-size
 $viewport-font-size: $px-font-size/$rem-font-size/($viewport-width/100);
