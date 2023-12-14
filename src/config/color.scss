@@ -1,5 +1,7 @@
 //颜色配置信息
 $color-base: #0f8cca !default;
+//文字颜色在base中的处理
+$color-in-base: white !default;
 //浅色的base
 $color-light-base: #0f8cca !default;
 
@@ -24,22 +26,11 @@ $color-warning: #ff8400 !default;
 $color-danger: #fe6270 !default;
 
 // color 颜色组
-$color-group: ('base', $color-base),
-	('light-base', $color-light-base),
-	('999', $color-999),
-	('666', $color-666),
-	('333', $color-333),
-	('e5e', $color-e5e),
-	('f4f', $color-f4f),
-	('org', $color-org),
-	('green', $color-green),
-	('red', $color-red),
-	('blue', $color-blue),
-	('grey', $color-grey),
-	('white', $color-white),
-	('default', $color-default),
-	('primary', $color-primary),
-	('info', $color-info),
-	('success', $color-success),
-	('warning', $color-warning),
-	('danger', $color-danger);
+$color-group: ("base", $color-base), ("light-base", $color-light-base),
+  ("999", $color-999), ("666", $color-666), ("333", $color-333),
+  ("e5e", $color-e5e), ("f4f", $color-f4f), ("org", $color-org),
+  ("green", $color-green), ("red", $color-red), ("blue", $color-blue),
+  ("grey", $color-grey), ("white", $color-white), ("default", $color-default),
+  ("primary", $color-primary), ("info", $color-info),
+  ("success", $color-success), ("warning", $color-warning),
+  ("danger", $color-danger);

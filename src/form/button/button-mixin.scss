@@ -1,25 +1,28 @@
-@mixin btn($name, $color) {
-	&.#{$prefix-name}btn-#{$name} {
-		color: white;
-		background-color: $color;
-		border-color: $color;
-		@if ($platform == 'h5') {
-			&:hover, &.active {
-				cursor: pointer;
-				background-color: adjust-hue($color, 5);
-				border-color: adjust-hue($color, 5);
-			}
-		} @else {
-			&.hover, &.active {
-				cursor: pointer;
-				background-color: adjust-hue($color, 5);
-				border-color: adjust-hue($color, 5);
-			}
-		}
-		&.#{$prefix-name}btn-plain {
-			color: $color;
-			background-color: #fff;
-			border-color: $color;
-		}
-	}
+@mixin btn($name, $background-color, $color, $border-color) {
+  &.#{$prefix-name}btn-#{$name} {
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+    @if ($platform == "h5") {
+      &:hover,
+      &.active {
+        cursor: pointer;
+        background-color: adjust-hue($background-color, 5);
+        border-color: adjust-hue($border-color, 5);
+      }
+    } @else {
+      &.hover,
+      &.active {
+        cursor: pointer;
+        background-color: adjust-hue($background-color, 5);
+        border-color: adjust-hue($border-color, 5);
+      }
+    }
+    //轮廓处理
+    &.#{$prefix-name}btn-plain {
+      color: $background-color;
+      background-color: white;
+      border-color: $background-color;
+    }
+  }
 }

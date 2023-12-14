@@ -1,20 +1,24 @@
-@import './button-mixin';
+@import "./button-mixin";
 
 //btn
 .#{$prefix-name}btn {
-	display: inline-block;
-	outline: none;
-	border: 1px solid transparent;
-	text-align: center;
-	background-color: white;
-	@extend %form-elm-pd;
-	@extend %border-box;
-	&[disabled] {
-		border-color: transparent !important;
-	}
+  display: inline-block;
+  outline: none;
+  border: 1px solid transparent;
+  text-align: center;
+  background-color: white;
+  @extend %form-elm-pd;
+  @extend %border-box;
+  &[disabled] {
+    border-color: transparent !important;
+  }
 }
 
 //btn color
 @each $name, $color in $color-group {
-	@include btn($name, $color);
+  @if $name == "base" {
+    @include btn($name, $color, $color-in-base, $color);
+  } @else {
+    @include btn($name, $color, $color-white, $color);
+  }
 }
