@@ -1,36 +1,33 @@
 //颜色配置信息
 $color-base: #0f8cca !default;
-//文字颜色在base中的处理
-$color-in-base: white !default;
-//浅色的base
-$color-light-base: #0f8cca !default;
-
 $color-999: #999;
 $color-666: #666;
 $color-333: #333;
 $color-e5e: #e5e5e5;
 $color-f4f: #f4f4f4;
-
 $color-org: #ff8400 !default;
 $color-green: #008000 !default;
 $color-red: red !default;
 $color-blue: blue !default;
 $color-white: white !default;
-$color-grey: #ccc !default;
+$color-grey: grey !default;
 
-$color-default: #666 !default;
-$color-primary: #337ab7 !default;
-$color-info: #5bc0de !default;
-$color-success: #44cb7f !default;
-$color-warning: #ff8400 !default;
-$color-danger: #fe6270 !default;
+//颜色组项
+$base-color-group: ("base", $color-base, $color-white) !default;
+$nine-color-group: ("999", $color-999, $color-white);
+$six-color-group: ("666", $color-666, $color-white);
+$three-color-group: ("333", $color-333, $color-white);
+$e5e-color-group: ("e5e", $color-e5e, $color-white);
+$f4f-color-group: ("f4f", $color-f4f, $color-white);
+$org-color-group: ("org", $color-org, $color-white) !default;
+$green-color-group: ("green", $color-green, $color-white) !default;
+$red-color-group: ("red", $color-red, $color-white) !default;
+$blue-color-group: ("blue", $color-blue, $color-white) !default;
+$white-color-group: ("white", $color-white, $color-333) !default;
+$grey-color-group: ("grey", $color-grey, $color-white) !default;
 
 // color 颜色组
-$color-group: ("base", $color-base), ("light-base", $color-light-base),
-  ("999", $color-999), ("666", $color-666), ("333", $color-333),
-  ("e5e", $color-e5e), ("f4f", $color-f4f), ("org", $color-org),
-  ("green", $color-green), ("red", $color-red), ("blue", $color-blue),
-  ("grey", $color-grey), ("white", $color-white), ("default", $color-default),
-  ("primary", $color-primary), ("info", $color-info),
-  ("success", $color-success), ("warning", $color-warning),
-  ("danger", $color-danger);
+$color-group: $base-color-group, $nine-color-group, $six-color-group,
+  $three-color-group, $e5e-color-group, $f4f-color-group,
+  $org-color-group $green-color-group, $red-color-group, $grey-color-group,
+  $white-color-group !default;

@@ -15,10 +15,6 @@
 }
 
 //btn color
-@each $name, $color in $color-group {
-  @if $name == "base" {
-    @include btn($name, $color, $color-in-base, $color);
-  } @else {
-    @include btn($name, $color, $color-white, $color);
-  }
+@each $name, $background-color, $color in $color-group {
+  @include btn($name, $background-color, $color, $background-color);
 }
