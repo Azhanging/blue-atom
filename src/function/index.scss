@@ -1,5 +1,6 @@
 //配置
-@import '../config/index';
+@import '../config/platform';
+@import '../config/viewport';
 
 //小程序rpx的转化 默认以1倍被转化
 @function rpx($size) {
