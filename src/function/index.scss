@@ -1,3 +1,5 @@
+@use "sass:math";
+
 //配置
 @import '../config/platform';
 @import '../config/viewport';
@@ -5,9 +7,14 @@
 //小程序rpx的转化 默认以1倍被转化
 @function rpx($size) {
 	@if ($platform == 'mp') {
-		@return #{$size * $wx-viewport + 'rpx'};
+		@return #{$size * $wx-viewport}rpx;
 	} @else if ($platform == 'h5') {
 		//设置750计算会出现2vw无法正常计算padding的rem值
-		@return #{($size/$h5-viewport)/$viewport-font-size/($viewport-width/100)+'rem'};
+		$calculated: math.div($size, $h5-viewport);
+		$calculated: math.div($calculated, $viewport-font-size);
+		$calculated: math.div($calculated, math.div($viewport-width, 100));
+		@return #{$calculated}rem;
+	} @else {
+		@return $size;
 	}
 }

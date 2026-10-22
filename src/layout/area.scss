@@ -1,8 +1,10 @@
+@use "sass:math";
+
 //%百分比宽度
 @if $use-width-percentage {
 	@for $i from 1 through 100 {
 		.#{$prefix-name}w-#{$i} {
-			width: #{$i + '%'};
+			width: #{$i}%;
 			@extend %border-box;
 		}
 	}

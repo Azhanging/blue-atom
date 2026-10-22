@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @if $use-flex {
 	//设置flex布局
 	.#{$prefix-name}flex {
@@ -53,23 +55,17 @@
 		}
 	}
 
-	/*
-	 * 属性定义了多根轴线的对齐方式。
-	 * 如果项目只有一根轴线，
-	 * 只有一行的flex是不起作用的，
-	 * 设置wrap就可以起作用了，
-	 * 该属性不起作用 align-content
-	 * */
+	//设置交叉轴的对齐方式 align-content
 	@each $name, $attrname in $flex-align-content {
 		.#{$prefix-name}flex-ac-#{$name} {
 			align-content: #{$attrname};
 		}
 	}
 
-	//设置flex-basis 1 - 10 排布
+	//设置flex-basis 1 - 20 * 5 = 100
 	@for $i from 1 through 20 {
 		.#{$prefix-name}flex-basis-#{$i * 5} {
-			flex-basis: $i * 5%;
+			flex-basis: #{$i * 5}% ;
 		}
 	}
 
@@ -80,4 +76,3 @@
 		}
 	}
 }
-

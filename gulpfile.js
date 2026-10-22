@@ -2,7 +2,7 @@
 
 var packageJson = require("./package.json"),
   gulp = require("gulp"),
-  sass = require("gulp-sass"),
+  sass = require("gulp-dart-sass"),
   header = require("gulp-header"),
   autoprefixer = require("gulp-autoprefixer");
 
@@ -30,8 +30,8 @@ gulp.task("sass", function () {
     )
     .pipe(
       autoprefixer({
-        browsers: ["last 13 versions", "ie 6-8"],
-        flexbox: true,
+        overrideBrowsersList: ["last 13 versions", "ie >= 9"],
+        grid: true,
       })
     )
     .pipe(
@@ -39,10 +39,9 @@ gulp.task("sass", function () {
         [
           "/*",
           "*	blue-atom.css v" + packageJson.version,
-          "*	(c) 2016-" + currentYear +" Blue",
+          "*	(c) 2016-" + currentYear + " Blue",
           "*	Released under the MIT License.",
           "*	https://github.com/azhanging/blue-atom",
-          "*	time:${new Date()}",
           "*/",
           "",
         ].join("\n")
@@ -54,7 +53,6 @@ gulp.task("sass", function () {
 //watch fn
 var watch = function (type) {
   gulp.watch(src.watch[type].path, function (ev) {
-    gulp.start(src.watch[type].task);
     console.log("修改路径:" + ev.path + ",修改类型:" + ev.type);
   });
 };
@@ -65,4 +63,4 @@ gulp.task("watch", function () {
 });
 
 //default
-gulp.task("default", ["watch", "sass"]);
+gulp.task("default", gulp.parallel("sass", "watch"));

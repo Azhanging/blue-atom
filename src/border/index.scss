@@ -12,15 +12,14 @@
 	@include border($name, $color);
 }
 
-//border-weight 边框的粗度
+//边框宽度
 @for $val from 1 through 10 {
 	@include border-weight($val);
 }
 
-//border-weight 边框的粗度
+//边框圆角
 @for $val from 1 through 10 {
 	.#{$prefix-name}bd-radius-#{$val} {
 		border-radius: #{$val}px !important;
 	}
 }
-

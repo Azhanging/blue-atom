@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @if $use-grid {
 	//行
 	.#{$prefix-name}row {
@@ -16,11 +18,11 @@
 
 	@for $i from 1 through 12 {
 		.#{$prefix-name}col-xs-#{$i} {
-			width: 100%/12*$i;
+			width: math.div(100%, 12) * $i;
 			@extend %xs-bb-l;
 		}
 		.#{$prefix-name}col-xs-offset-#{$i} {
-			margin-left: 100%/12*$i;
+			margin-left: math.div(100%, 12) * $i;
 			@extend %xs-bb-l;
 		}
 	}
@@ -32,13 +34,14 @@
 			float: left;
 			min-height: 1px;
 		}
+
 		@for $i from 1 through 12 {
 			.#{$prefix-name}col-sm-#{$i} {
-				width: 100%/12*$i;
+				width: math.div(100%, 12) * $i;
 				@extend %sm-bb-l;
 			}
 			.#{$prefix-name}col-sm-offset-#{$i} {
-				margin-left: 100%/12*$i;
+				margin-left: math.div(100%, 12) * $i;
 				@extend %sm-bb-l;
 			}
 		}
@@ -51,14 +54,15 @@
 			float: left;
 			min-height: 1px;
 		}
+
 		@for $i from 1 through 12 {
 			.#{$prefix-name}col-md-#{$i} {
-				width: 100%/12*$i;
-				@extend %md-bb-l
+				width: math.div(100%, 12) * $i;
+				@extend %md-bb-l;
 			}
 			.#{$prefix-name}col-md-offset-#{$i} {
-				margin-left: 100%/12*$i;
-				@extend %md-bb-l
+				margin-left: math.div(100%, 12) * $i;
+				@extend %md-bb-l;
 			}
 		}
 	}
@@ -70,60 +74,69 @@
 			float: left;
 			min-height: 1px;
 		}
+
 		@for $i from 1 through 12 {
 			.#{$prefix-name}col-lg-#{$i} {
-				width: 100%/12*$i;
+				width: math.div(100%, 12) * $i;
 				@extend %lg-bb-l;
 			}
 			.#{$prefix-name}col-lg-offset-#{$i} {
-				margin-left: 100%/12*$i;
+				margin-left: math.div(100%, 12) * $i;
 				@extend %lg-bb-l;
 			}
 		}
 	}
 
-	//栅格隐藏节点
 	//xs
 	@media (max-width: $xs) {
 		.#{$prefix-name}hidden-#{$xs-name} {
-			display: none !important
+			display: none !important;
 		}
 	}
 
 	//sm
 	@media (min-width: $xs + 1) and (max-width: $md - 1) {
 		.#{$prefix-name}hidden-#{$sm-name} {
-			display: none !important
+			display: none !important;
 		}
 	}
 
 	//md
 	@media (min-width: $md) and (max-width: $lg - 1) {
 		.#{$prefix-name}hidden-#{$md-name} {
-			display: none !important
+			display: none !important;
 		}
 	}
 
 	//lg
 	@media (min-width: $lg) {
 		.#{$prefix-name}hidden-#{$lg-name} {
-			display: none !important
+			display: none !important;
 		}
 	}
 
-	//栅格占位节点
+	//响应式可见性
 	@each $name, $size in $grid-group {
-		@if $name == xs {
+		@if ($name == 'xs') {
 			.#{$prefix-name}visibility-#{$name} {
-				visibility: hidden;
+				display: block !important;
+			}
+			@media (max-width: $xs) {
+				.#{$prefix-name}visibility-#{$name} {
+					display: none !important;
+				}
 			}
 		} @else {
 			@media (min-width: #{$size}) {
 				.#{$prefix-name}visibility-#{$name} {
-					visibility: hidden;
+					display: block !important;
+				}
+			}
+			@media (max-width: $xs) {
+				.#{$prefix-name}visibility-#{$name} {
+					display: none !important;
 				}
 			}
 		}
 	}
 }
-

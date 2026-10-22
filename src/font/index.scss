@@ -10,7 +10,7 @@
 	/*px 字体大小 $font-size-start px -> $font-size-end px*/
 	@for $i from $font-size-start through $font-size-end {
 		.#{$prefix-name}f-#{$i} {
-			@include font-size(#{$i+ 'px'});
+			@include font-size(#{$i}px);
 		}
 	}
 }
@@ -25,8 +25,3 @@
 		}
 	}
 }
-
-
-
-
-

@@ -1,16 +1,16 @@
 {
   "name": "blue-atom",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "scripts": {
     "start": "gulp"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-header": "^1.8.9",
-    "gulp-sass": "^3.1.0",
-    "node-sass": "^4.7.2"
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-header": "^2.0.9",
+    "sass": "^1.102.0"
   },
   "license": "ISC"
 }

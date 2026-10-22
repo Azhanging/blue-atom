@@ -3,7 +3,7 @@
 	margin: 0;
 }
 
-//px margin margin
+//px margin
 @if $use-px-margin {
 	@for $i from $margin-start through $margin-end {
 		.#{$prefix-name}mg-#{$i} {
@@ -60,4 +60,3 @@
 		}
 	}
 }
-
